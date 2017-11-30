@@ -17,11 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from Shop_El.views import *
 
-
 urlpatterns = [
     url(r'^admin', admin.site.urls),
     url(r'^signup', signup_view),
     url(r'^list', list_view),
     url(r'^login', login_view),
+    url(r'^product/(?P<id>\d+)', ProdView.as_view(), name='product_url'),
     url(r'', login_view),
 ]

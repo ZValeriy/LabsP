@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from lab5RIP.Prods.makelist import listofprs
-
+from django.views import View
 
 def list_view(request):
     return render(request, ".\pages\list.html", {'list': listofprs})
@@ -17,3 +17,12 @@ def signup_view(request):
 def base_view(request):
     return render(request, ".\pages\\base.html")
 
+
+class ProdView(View):
+    def get(self, request, id):
+        data = {
+            'product': {
+                'id': id
+            }
+        }
+        return render(request, '.\pages\product.html', data)

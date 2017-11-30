@@ -1,0 +1,5 @@
+{% extends "./pages/base.html" %}
+{% block title %}Товар №{{ product.id }} {% endblock %}
+{% block body %} Страница товара №{{ product.id }}
+    {% include "./pages/list.html" with product=product %}
+{% endblock %}

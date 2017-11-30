@@ -6,7 +6,8 @@
 
 .font {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 20px;
+    padding: 20px;
+	margin-left: 20px;
 }
 
 .btn_head {
