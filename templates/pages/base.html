@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static "./styles.css" %}">
+    </head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <body>
+        <div class="headerpage">
+                <div class="row">
+                        <div class="col-xs-6 col-md-8"><h2 class="font">Продажа компьютеров</h2></div>
+                        </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    {% block body %}{% endblock %}
+                </div>
+                <div class="col-md-3">
+                </div>
+        </div>
+    </body>
+
+
+</html>
